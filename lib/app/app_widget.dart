@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:meal_planner_ui/app/screens/splash_screen/splash_screen.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: "Meal Planner UI",
       debugShowCheckedModeBanner: false,
-      home: Container()
+      home: SplashScreen()
     );
   }
 }
+
+// ff774d
+// fdece5
