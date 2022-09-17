@@ -15,7 +15,9 @@ class ScrollOptionFoodHeaderComponent extends StatelessWidget {
         title,
         style: TextStyle(
           color: ColorsUtils.color.blackColor,
-          fontWeight: fontWeight ? FontWeight.bold : FontWeight.w400
+          fontSize: 14,
+          fontFamily: "OriginalSurfer",
+          fontWeight: fontWeight ? FontWeight.bold : FontWeight.w100
         )
       ),
     );

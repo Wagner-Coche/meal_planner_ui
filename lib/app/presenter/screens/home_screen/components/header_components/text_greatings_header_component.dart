@@ -15,8 +15,9 @@ class TextGreatingsHeaderComponent extends StatelessWidget {
         textAlign: TextAlign.left,
         style: TextStyle(
           color: ColorsUtils.color.blackColor,
-          fontSize: 30,
-          fontWeight: FontWeight.bold
+          fontSize: 24,
+          fontFamily: "MochiyPopOne",
+          fontWeight: FontWeight.w300
         ),
       ),
     );
