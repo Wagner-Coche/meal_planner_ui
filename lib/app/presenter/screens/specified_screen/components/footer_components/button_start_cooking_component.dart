@@ -7,9 +7,9 @@ class ButtomStartCookingComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50,
+      height: 60,
       width: MediaQuery.of(context).size.width,
-      margin: const EdgeInsets.only(left: 25,  right: 25, top: 30),
+      margin: const EdgeInsets.only(left: 25,  right: 25, top: 25),
       child: ElevatedButton(
         onPressed: () {}, 
         style: ElevatedButton.styleFrom(

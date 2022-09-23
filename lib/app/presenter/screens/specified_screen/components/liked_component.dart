@@ -32,6 +32,7 @@ class _LikedComponentState extends State<LikedComponent> {
           ]
         ),
         child: InkWell(
+          borderRadius: BorderRadius.circular(45),
           onTap: () => setState(() {
             LikedComponentController.instance.verifyLikedState();
           }),

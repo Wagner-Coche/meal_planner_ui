@@ -11,10 +11,13 @@ class IconSpecifiedComponent extends StatelessWidget {
       margin: const EdgeInsets.only(left: 30),
       child: InkWell(
         onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const HomeScreen())),
-        child: Icon(
-          Icons.arrow_back_ios, 
-          size: 22, 
-          color: ColorsUtils.color.whiteColor
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Icon(
+            Icons.arrow_back_ios, 
+            size: 22, 
+            color: ColorsUtils.color.whiteColor
+          ),
         ),
       )
     );
