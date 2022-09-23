@@ -1,20 +1,28 @@
 import 'package:flutter/material.dart';
 
 class ImageSpecifiedComponent extends StatelessWidget {
-  const ImageSpecifiedComponent({Key? key}) : super(key: key);
+  const ImageSpecifiedComponent({Key? key, required this.image, required this.tag}) : super(key: key);
+
+  final String image;
+  final String tag;
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: ClipOval(
-        child: Container(
-          height: 350,
-          width: 350,
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("assets/images/IMG-20220616-WA0039.jpg"),
-              fit: BoxFit.cover,
-            )
+        child: Hero(
+          tag: tag,
+          child: ClipOval(
+            child: Container(
+              height: 350, 
+              width: 350,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(image),
+                  fit: BoxFit.cover,
+                )
+              ),
+            ),
           ),
         ),
       ),

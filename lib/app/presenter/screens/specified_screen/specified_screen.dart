@@ -5,17 +5,20 @@ import 'package:meal_planner_ui/app/presenter/screens/specified_screen/division/
 import 'package:meal_planner_ui/app/presenter/utils/colors.dart';
 
 class SpecifiedScreen extends StatelessWidget {
-  const SpecifiedScreen({Key? key}) : super(key: key);
+  const SpecifiedScreen({Key? key, required this.image, required this.tag}) : super(key: key);
+
+  final String image;
+  final String tag;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorsUtils.color.primaryColor,
       body: Stack(
-        children: const <Widget>[
-          SpecifiedScreenDivisionHeader(),
-          SpecifiedScreenDivisionBody(),
-          LikedComponent(),
+        children: <Widget>[
+          SpecifiedScreenDivisionHeader(image: image, tag: tag),
+          const SpecifiedScreenDivisionBody(),
+          const LikedComponent(),
         ],
       ),
     );

@@ -14,7 +14,7 @@ class AppWidget extends StatelessWidget {
     return const MaterialApp(
       title: "Meal Planner UI",
       debugShowCheckedModeBanner: false,
-      home: SpecifiedScreen()
+      home: SpecifiedScreen(image: "assets/images/IMG-20220616-WA0039.jpg", tag: "image",)
     );
   }
 }

@@ -1,3 +1,6 @@
+import 'package:meal_planner_ui/app/presenter/screens/specified_screen/specified_screen.dart';
+
+import '../../../specified_screen/components/header_components/image_specified_component.dart';
 import 'package:flutter/material.dart';
 import 'package:meal_planner_ui/app/presenter/utils/colors.dart';
 
@@ -22,23 +25,31 @@ class FavouritesCookCardsComponent extends StatelessWidget {
           Container(
             padding: const EdgeInsets.only(bottom: 180),
             child: ClipOval(
-              child: Container(
-                height: 180,
-                width: 180,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/images/IMG-20220616-WA0039.jpg"),
-                    fit: BoxFit.cover
+              child: GestureDetector(
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const SpecifiedScreen(image: "assets/images/IMG-20220616-WA0039.jpg", tag: "image",))),
+                child: Hero(
+                  tag: "image",
+                  child: ClipOval(
+                    child: Container(
+                      height: 180,
+                      width: 180,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/images/IMG-20220616-WA0039.jpg"),
+                          fit: BoxFit.cover
+                        ),
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                            blurRadius: 20,
+                            offset: Offset(2, 10),
+                            color: Colors.black12,
+                            spreadRadius: 20
+                          )
+                        ],
+                      )
+                    ),
                   ),
-                  boxShadow: <BoxShadow>[
-                    BoxShadow(
-                      blurRadius: 20,
-                      offset: Offset(2, 10),
-                      color: Colors.black12,
-                      spreadRadius: 20
-                    )
-                  ],
-                )
+                ),
               ),
             ),
           ),
