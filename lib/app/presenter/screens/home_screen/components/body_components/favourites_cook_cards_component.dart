@@ -1,6 +1,4 @@
 import 'package:meal_planner_ui/app/presenter/screens/specified_screen/specified_screen.dart';
-
-import '../../../specified_screen/components/header_components/image_specified_component.dart';
 import 'package:flutter/material.dart';
 import 'package:meal_planner_ui/app/presenter/utils/colors.dart';
 

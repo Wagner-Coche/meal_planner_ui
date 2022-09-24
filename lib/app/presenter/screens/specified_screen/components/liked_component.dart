@@ -1,5 +1,4 @@
-import 'package:meal_planner_ui/app/presenter/screens/specified_screen/controllers/liked_component_controller.dart';
-
+import 'package:like_button/like_button.dart';
 import '../../../utils/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -31,15 +30,9 @@ class _LikedComponentState extends State<LikedComponent> {
             )
           ]
         ),
-        child: InkWell(
-          borderRadius: BorderRadius.circular(45),
-          onTap: () => setState(() {
-            LikedComponentController.instance.verifyLikedState();
-          }),
-          child: LikedComponentController.instance.likedState ? 
-          Icon(Icons.favorite, size: 28, color: ColorsUtils.color.redColor) : 
-          Icon(Icons.favorite_border, size: 28, color: ColorsUtils.color.redColor),
-        ),
+        child: const LikeButton(
+          size: 28,
+        )
       ),
     );
   }
