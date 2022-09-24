@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:meal_planner_ui/app/presenter/screens/specified_screen/specified_screen.dart';
+import 'package:meal_planner_ui/app/presenter/screens/splash_screen/splash_screen.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({Key? key}) : super(key: key);
@@ -14,7 +14,7 @@ class AppWidget extends StatelessWidget {
     return const MaterialApp(
       title: "Meal Planner UI",
       debugShowCheckedModeBanner: false,
-      home: SpecifiedScreen(image: "assets/images/IMG-20220616-WA0039.jpg", tag: "image",)
+      home: SplashScreen(),
     );
   }
 }
