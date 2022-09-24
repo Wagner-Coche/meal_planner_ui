@@ -18,6 +18,3 @@ class AppWidget extends StatelessWidget {
     );
   }
 }
-
-// ff774d
-// fdece5
